@@ -1,0 +1,351 @@
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sniglet-regular {
+  font-family: "Sniglet", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.sniglet-extrabold {
+  font-family: "Sniglet", system-ui;
+  font-weight: 800;
+  font-style: normal;
+}
+
+
+
+body {
+    position: relative;
+    font-family: "Sniglet",sans-serif;
+    font-weight: 500;
+    z-index: 10;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+    background-image: url(images/macaron5.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+nav,a {
+    font-family: Indie Flower, cursive;
+    margin: 0 10px; 
+    text-decoration: none; 
+    color: #71c0c0; 
+    font-weight: 550;
+}
+
+
+header { 
+    background: #f0d7e3; 
+    padding: 20px; 
+    text-align: center;
+    border-radius: 27% 73% 54% 46% / 48% 77% 23% 52% ;
+    color : #842543;
+    
+}
+
+h1{
+    font-family : "Indie Flower", cursive;
+    font-size: 6em;
+    text-align: center;
+}
+
+
+footer { 
+    background: #f0d7e3; 
+    padding: 20px; 
+    text-align: center;
+    border-radius: 89% 11% 84% 16% / 52% 49% 51% 48% ;
+}
+
+.entete img {
+  position: fixed;
+  top: 10px;   
+  left: 10px;         
+  z-index: 1;          
+  width: 17%;          
+  height: auto;
+  opacity: 0.6;
+  padding: 2px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.3);
+  background-color: white;
+  border-radius: 35% 65% 58% 42% / 52% 69% 31% 48%;
+}
+
+
+.entete a {
+  position: relative;
+  font-family: Indie Flower;
+  font-size: 1.6em;
+  z-index: 1100;
+  color: #71c0c0;
+  padding: 2px 5px;
+  float: right;
+  font-weight: 600;
+}
+
+
+/* Style du bloc */
+.bloc {
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 5px;
+  font-family: "Sniglet";
+}
+
+.titre {
+  /*margin: px ;*/
+  background-color: #1f694f;
+  font-family: "Sniglet", system-ui;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5em;
+  border-radius: 10px 10px 0 0;  
+}
+
+.description{
+  font-family: "Sniglet";
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.contenu {
+  padding: 10px;
+  display: none;
+  background-color: rgba(240, 215, 227, 0.3); /* fond blanc très transparent */
+  border-top: 1px solid #cccccc;
+  border-radius: 0 0 10px 10px;
+  
+
+  backdrop-filter: blur(8px); /* flou derrière */
+  -webkit-backdrop-filter: blur(8px); /* flou pour Safari */
+}
+
+.bloc.active .contenu {
+  display: block;
+}
+
+.presentation{
+  font-family: "Sniglet";
+  text-align: center;
+  margin: 5px auto;
+  max-width: 900px;
+}
+
+.intitulé {
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.6em;
+  line-height: 1.5;
+  font-weight: bold;
+}
+
+
+.sous-titre {
+  background-color: #f0d7e3;
+  color: #1f694f;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 5px 0;
+  font-family: 'Indie Flower', cursive;
+  font-size: 1.6em;
+  font-weight: bold ;
+}
+
+.sous-contenu {
+  display: none;
+  padding: 5px 15px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-left: 3px solid #1f694f;
+  border-radius: 0 0 5px 5px;
+  font-size: 0.95em;
+}
+
+
+.lien-icone:hover{
+  opacity: 0.5;
+}
+
+
+.contenu-principal {
+  position: relative;
+  z-index: 10;  /* plus grand que 1 pour être devant la photo */
+}
+
+
+
+
+
+.carrousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carrousel-plein {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+}
+
+.carrousel-plein::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.carrousel-plein img {
+  height: auto;
+  max-height: 300px; /* ou la hauteur max souhaitée */
+  width: auto;
+  object-fit: contain;
+  scroll-snap-align: center;
+  flex-shrink: 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+
+
+.grille-cv {
+  display: grid;
+  grid-template-columns: 180px 800px 180px;
+  gap: 20px;
+  align-items: start;
+}
+
+aside.gauche {
+  position: sticky;
+  text-align: center;
+  top: 350px;
+  margin-top: 100px;
+  background: rgba(240, 215, 227, 0.6);
+  padding: 1px;
+  border-radius: 15px;
+  font-size: 0.95em;
+  line-height: 1.5;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  backdrop-filter: blur(5px);
+  font-family: 'Sniglet', sans-serif;
+}
+
+aside.droite {
+  position: sticky;
+  top: 60px; 
+  margin-top: 0px;
+  background: rgba(240, 215, 227, 0.6);
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 0.95em;
+  line-height: 1.5;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  backdrop-filter: blur(5px);
+  font-family: 'Sniglet', sans-serif;
+}
+
+
+
+aside h3 {
+  font-family: "Indie Flower", cursive;
+  font-size: 1.4em;
+  margin-bottom: 10px;
+  color: #842543;
+}
+
+aside ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+aside ul li {
+  margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 800px) 
+{
+
+  body {
+    padding: 10px;
+  }
+
+  .entete img {
+    width: 25%;
+    top: 5px;
+    left: 5px;
+  }
+
+  .intitulé {
+    font-family: "Indie Flower", sans-serif; /* police lisible sur mobile */
+    font-size: 1.8em;
+    font-weight: bold; /* taille un peu plus grande si besoin */
+  }
+
+
+
+  h1 {
+    font-size: 4em;
+  }
+
+  .presentation {
+    font-size: 0.8em;
+    padding: 5px;
+  }
+
+  .bloc {
+    margin: 10px 0;
+  }
+
+  .titre {
+    font-size: 1.2em;
+  }
+
+  .contenu {
+    font-size: 0.8em;
+  }
+
+  .pied-de-page img {
+    width: 20px !important;
+  }
+
+
+
+  .grille-cv {
+      display: block;
+    }
+
+    aside.gauche,
+    aside.droite {
+      position: static;
+      margin: 10px 0;
+      max-height: none;
+    }
+
+}

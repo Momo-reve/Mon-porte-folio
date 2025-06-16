@@ -35,11 +35,12 @@ body {
   }
 
 nav,a {
-    font-family: Indie Flower, cursive;
+    font-family: "Indie Flower", cursive;
+    font-size: 1.4em;
     margin: 0 10px; 
     text-decoration: none; 
     color: #71c0c0; 
-    font-weight: 550;
+    font-weight: 800;
 }
 
 
@@ -263,9 +264,9 @@ aside h3 {
   color: #842543;
 }
 
-aside ul {
-  
-  padding-left: 10;
+aside.gauche ul {
+  list-style: none;
+  padding-left: 0;
 }
 
 aside ul li {
